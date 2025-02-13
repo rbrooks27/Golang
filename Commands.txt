@@ -1,0 +1,7 @@
+Remember to:
+git add
+git commit -m ""
+git push
+
+To compile:
+go run <filename>.go 
