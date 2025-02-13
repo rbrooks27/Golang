@@ -1,0 +1,16 @@
+Similarities
+Both have garbage collection.
+Both work on multiple platforms.
+Both have a strong standard library.
+Both focus on simplicity.
+Both support concurrency.
+
+Differences
+Go is faster (compiled), Python is slower (interpreted).
+Go is statically typed, Python is dynamically typed.
+Go uses goroutines, Python uses threads/async.
+Go is great for backend, Python for AI/data science.
+Go uses error returns, Python uses exceptions.
+
+How to print hello world in typescript:
+console.log("Hello World");
