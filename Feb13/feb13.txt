@@ -86,4 +86,129 @@ Output:
 1
 hello
 
+Task 4: Declaring and Typed Constants
+
+package main
+import ("fmt")
+
+const A int = 1
+
+// multiple const
+const (
+  G int = 1
+  B = 3.14
+  C = "Hi!"
+)
+
+func main() {
+  fmt.Println(A)
+}
+
+Task 5: Different Types of Printing 
+package main
+import ("fmt")
+
+func main() {
+  var i,j string = "Hello","World"
+
+  fmt.Print(i) 
+  fmt.Print(j)
+  // Output: HelloWorld
+
+  fmt.Print(i, "\n")
+  fmt.Print(j, "\n")
+  /* Output: 
+  Hello
+  World
+  */
+
+  fmt.Print(i, "\n",j)
+  /* Output: 
+  Hello
+  World
+  */
+
+  fmt.Print(i, " ", j)
+  // Output: Hello World
+
+  fmt.Println(i,j)
+  // Output: Hello World
+
+  var h string = "Hello"
+  var m int = 15
+
+  // v = value and t = type
+  fmt.Printf("h has value: %v and type: %T\n", h, h)
+  fmt.Printf("m has value: %v and type: %T", m, m)
+  /*
+  i has value: Hello and type: string
+  j has value: 15 and type: int
+  */
+} 
+
+General Formatting:
+Verb	Description
+%v	Prints the value in the default format
+%#v	Prints the value in Go-syntax format
+%T	Prints the type of the value
+%%	Prints the % sign
+
+Interger Formatting:
+Verb	Description
+%b	Base 2
+%d	Base 10
+%+d	Base 10 and always show sign
+%o	Base 8
+%O	Base 8, with leading 0o
+%x	Base 16, lowercase
+%X	Base 16, uppercase
+%#x	Base 16, with leading 0x
+%4d	Pad with spaces (width 4, right justified)
+%-4d	Pad with spaces (width 4, left justified)
+%04d	Pad with zeroes (width 4
+
+String Formatting Verbs:
+%s	Prints the value as plain string
+%q	Prints the value as a double-quoted string
+%8s	Prints the value as plain string (width 8, right justified)
+%-8s	Prints the value as plain string (width 8, left justified)
+%x	Prints the value as hex dump of byte values
+% x	Prints the value as hex dump with spaces
+
+Ex. 
+Hello
+"Hello"
+   Hello
+Hello
+48656c6c6f
+48 65 6c 6c 6f
+
+Boolean Formatting Verbs;
+
+Verb	Description
+%t	Value of the boolean operator in true or false format (same as using %v)
+
+Float Formatting Verbs
+%e	Scientific notation with 'e' as exponent
+%f	Decimal point, no exponent
+%.2f	Default width, precision 2
+%6.2f	Width 6, precision 2
+%g	Exponent as needed, only necessary digits
+
+Task 6: Type Checking
+package main
+
+import "fmt"
+
+func main() {
+    var a bool = true     // Boolean
+    var b int = 5         // Integer
+    var c float32 = 3.14  // Floating point number
+    var d string = "Hi!"  // String
+
+    fmt.Printf("Boolean: %v, Type: %T\n", a, a)
+    fmt.Printf("Integer: %v, Type: %T\n", b, b)
+    fmt.Printf("Float:   %v, Type: %T\n", c, c)
+    fmt.Printf("String:  %v, Type: %T\n", d, d)
+}
 
