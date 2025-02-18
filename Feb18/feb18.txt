@@ -412,6 +412,8 @@ func main() {
 Append One Slice To Another Slice
 
 // Syntax: slice3 = append(slice1, slice2...)
+// The '...' after slice2 is necessary 
+// when appending the elements of one slice to another.
 
 package main
 import ("fmt")
