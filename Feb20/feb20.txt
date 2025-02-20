@@ -555,7 +555,7 @@ Output:
 1      orange
 2      banana
 
-Values:
+Values
 Output:
 apple
 orange
