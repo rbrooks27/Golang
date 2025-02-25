@@ -1,0 +1,135 @@
+Task 5: Structs
+
+/*
+Struct (Structure):
+	- A struct is used to create a collection of members of different data types, into a single variable.
+	- While arrays are used to store multiple values of the same data type into a single variable, structs are used to store multiple values of different data types into a single variable.
+*/
+
+/*
+Syntax:
+	type struct_name struct {
+	member1 datatype;
+	member2 datatype;
+	member3 datatype;
+	...
+	}
+*/
+
+/*
+Example of using syntax:
+	type Person struct {
+	name string
+	age int
+	job string
+	salary int
+	}
+*/
+
+package main
+import ("fmt")
+
+type Person struct {
+  name string
+  age int
+  job string
+  salary int
+}
+
+func main() {
+  var pers1 Person
+  var pers2 Person
+
+  // Pers1 specification
+  pers1.name = "Hege"
+  pers1.age = 45
+  pers1.job = "Teacher"
+  pers1.salary = 6000
+
+  // Pers2 specification
+  pers2.name = "Cecilie"
+  pers2.age = 24
+  pers2.job = "Marketing"
+  pers2.salary = 4500
+
+  // Access and print Pers1 info
+  fmt.Println("Name: ", pers1.name)
+  fmt.Println("Age: ", pers1.age)
+  fmt.Println("Job: ", pers1.job)
+  fmt.Println("Salary: ", pers1.salary)
+
+  // Access and print Pers2 info
+  fmt.Println("Name: ", pers2.name)
+  fmt.Println("Age: ", pers2.age)
+  fmt.Println("Job: ", pers2.job)
+  fmt.Println("Salary: ", pers2.salary)
+}
+
+/*
+Output:
+Name: Hege
+Age: 45
+Job: Teacher
+Salary: 6000
+Name: Cecilie
+Age: 24
+Job: Marketing
+Salary: 4500
+*/
+
+/*
+Passing a Struct as Function Arguments:
+*/
+
+package main
+
+import "fmt"
+
+type BasketballPlayer struct {
+	name      string
+	age       int
+	team      string
+	pointsPerGame float64
+}
+
+func main() {
+	var player1 BasketballPlayer
+	var player2 BasketballPlayer
+
+	// Player1 specification
+	player1.name = "LeBron James"
+	player1.age = 39
+	player1.team = "Los Angeles Lakers"
+	player1.pointsPerGame = 27.2
+
+	// Player2 specification
+	player2.name = "Stephen Curry"
+	player2.age = 35
+	player2.team = "Golden State Warriors"
+	player2.pointsPerGame = 24.6
+
+	// Print player info by calling a function
+	printPlayer(player1)
+	printPlayer(player2)
+}
+
+func printPlayer(player BasketballPlayer) {
+	fmt.Println("Name: ", player.name)
+	fmt.Println("Age: ", player.age)
+	fmt.Println("Team: ", player.team)
+	fmt.Println("Points Per Game: ", player.pointsPerGame)
+	fmt.Println()
+}
+
+/*
+Name:  LeBron James
+Age:  39
+Team:  Los Angeles Lakers
+Points Per Game:  27.2
+
+Name:  Stephen Curry
+Age:  35
+Team:  Golden State Warriors
+Points Per Game:  24.6
+
+*/
