@@ -219,3 +219,122 @@ Output:
 4
 */
 
+/*
+The break Statement:
+	- The break statement is used to break/terminate the loop execution.
+*/
+
+// Example
+package main
+import ("fmt")
+
+func main() {
+  for i:=0; i < 5; i++ {
+    if i == 3 {
+      break
+    }
+	// the program will now exit/terminate because it hits 3
+   fmt.Println(i)
+  }
+}
+
+/*
+Output:
+0
+1
+2
+*/
+
+/*
+The Range Keyword: 
+- The range keyword is used to more easily iterate through the elements of an array, slice or map. 
+It returns both the index and the value.
+
+Syntax:
+
+for index, value := range array|slice|map {
+   // code to be executed for each iteration
+}
+
+*/
+
+package main
+import ("fmt")
+
+func main() {
+  fruits := [3]string{"apple", "orange", "banana"}
+  for idx, val := range fruits {
+     fmt.Printf("%v\t%v\n", idx, val)
+  }
+
+  for _, val := range fruits {
+	fmt.Printf("%v\n", val)
+ }
+
+ for idx, _ := range fruits {
+	fmt.Printf("%v\n", idx)
+ }
+
+}
+
+/*
+Both Values and Index
+Output:
+0      apple
+1      orange
+2      banana
+
+Values:
+Output:
+apple
+orange
+banana
+
+Index
+Output:
+0
+1
+2
+*/
+
+Task 3: Functions, Parameters, Arguments
+
+/*
+Functions:
+	- A function is a block of statements that can be used repeatedly in a program.
+	- A function will not execute automatically when a page loads.
+	- A function will be executed by a call to the function
+*/
+
+/*
+Creating Function/Syntax:
+		- To create (often referred to as declare) a function, do the following:
+				- Use the func keyword.
+				- Specify a name for the function, followed by parentheses ().
+				- Finally, add code that defines what the function should do, inside curly braces {}.
+
+Syntax:				
+	func FunctionName() {
+	// code to be executed
+	}
+*/
+
+/*
+Calling a Function:
+	- Functions are not executed immediately.
+	- Call it in main with <functionname>()
+*/
+
+// Example
+package main
+import ("fmt")
+
+func myMessage() {
+  fmt.Println("I just got executed!")
+} // Output: I just got called
+
+func main() {
+  myMessage() // call the function
+  // myMessage() // this would call it again
+}
+
