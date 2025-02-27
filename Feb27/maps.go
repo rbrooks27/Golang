@@ -9,6 +9,7 @@ Maps:
 
 	Syntax:
 		var a = map[KeyType]ValueType{key1:value1, key2:value2,...}
+							or
 		b := map[KeyType]ValueType{key1:value1, key2:value2,...}
 	*/
 
