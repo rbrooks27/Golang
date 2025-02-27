@@ -11,6 +11,7 @@ Passing a Struct as Function Arguments:
 		age       int
 		team      string
 		pointsPerGame float64
+		contract 		int
 	}
 
 	func main() {
@@ -22,12 +23,14 @@ Passing a Struct as Function Arguments:
 		player1.age = 39
 		player1.team = "Los Angeles Lakers"
 		player1.pointsPerGame = 27.2
+		player1.contract = 600_000_000
 
 		// Player2 specification
 		player2.name = "Stephen Curry"
 		player2.age = 35
 		player2.team = "Golden State Warriors"
 		player2.pointsPerGame = 24.6
+		player2.contract = 300_000_000
 
 		// Print player info by calling a function
 		printPlayer(player1)
@@ -39,6 +42,7 @@ Passing a Struct as Function Arguments:
 		fmt.Println("Age: ", player.age)
 		fmt.Println("Team: ", player.team)
 		fmt.Println("Points Per Game: ", player.pointsPerGame)
+		fmt.Println("Contract: $", player.contract)
 		fmt.Println()
 	}
 
