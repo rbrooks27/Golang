@@ -453,3 +453,9 @@ Iterating over Maps in a Specific Order:
 				two : 2, three : 3, four : 4, one : 1, 
 				one : 1, two : 2, three : 3, four : 4,
 				*/
+
+Activity 1:
+	- Arrays have fixed lengths and store elements of the same data type, while slices are more flexible, built on top of arrays, and can dynamically resize. 
+	- Structs group different data types under one type, making them useful for representing complex objects, whereas maps store key-value pairs, allowing quick data retrieval by keys. 
+	- All four features are essential for organizing data, but only slices and maps have dynamic sizes, while arrays and structs have fixed lengths or fields.
+
