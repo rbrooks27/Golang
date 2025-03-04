@@ -607,6 +607,73 @@
 
 					// Initialize a value
 					map_name[KeyType] = value
- */
+	Creating a Empty Map:
+		Syntax (same as creating a make() map):
+				var a = make(map[KeyType]ValueType)
+	Allowed Key Types:
+		- Everything but slices, maps, and functions
+	Access Map Elements:
+		Syntax:
+			value = map_name[key]
+		Ex. 
+			var a = make(map[string]string)
+				a["brand"] = "Ford"
+				a["model"] = "Mustang"
+				a["year"] = "1964"
+
+				fmt.Printf(a["brand"]) // Output: Ford
+	Updating and Adding Map Elements:
+		Syntax:
+				map_name[key] = value
+	Deleting Map Elements:
+		Syntax:
+				delete(map_name, key)
+	Checking For Specific Elements in a Map
+		Syntax:
+				val, ok :=map_name[key]
+				- If you only want to check the existence of a certain key, you can use the blank identifier (_) in place of val.
+	Maps can be References:
+		- If two map variables refer to the same hash table, changing the content of one variable affect the content of the other.
+		- Ex.
+				var a = map[string]string{"brand": "Ford", "model": "Mustang", "year": "1964"}
+				b := a
+
+				fmt.Println(a) // Output: [brand:Ford model:Mustang year:1964]
+				fmt.Println(b) // Output: [brand:Ford model:Mustang year:1964]
+
+				b["year"] = "1970"
+				fmt.Println("After change to b:")
+
+				fmt.Println(a) // Output: [brand:Ford model:Mustang year:1970]
+				fmt.Println(b) // Output: [brand:Ford model:Mustang year:1970]
+	Iterating Over Maps
+		- You can use range to iterate over maps
+		- where k = keyType and v = valueType
+		- Ex.
+				a := map[string]int{"one": 1, "two": 2, "three": 3, "four": 4}
+
+				for k, v := range a {
+					fmt.Printf("%v : %v, ", k, v) // Output: two : 2, three : 3, four : 4, one : 1,
+				}
+	Iterating Over Maps in a Specific Order
+		- Maps are unordered data structures.
+		- If you need to iterate over a map in a specific order, you must have a separate data structure that specifies that order.
+		- Ex. 
+				a := map[string]int{"one": 1, "two": 2, "three": 3, "four": 4}
+
+				var b []string             // defining the order
+				b = append(b, "one", "two", "three", "four")
+
+				for k, v := range a {        // loop with no order
+					fmt.Printf("%v : %v, ", k, v) // Output: two : 2, three : 3, four : 4, one : 1,
+				}
+
+				fmt.Println()
+
+				for _, element := range b {  // loop with the defined order
+					fmt.Printf("%v : %v, ", element, a[element]) // Output: one : 1, two : 2, three : 3, four : 4,
+				}
+	 */
+// End 
 
 
