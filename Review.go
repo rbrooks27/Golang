@@ -583,7 +583,7 @@
 					}
 
 				then you can use
-				var <variableName> Struct
+				var <variableName> struct_name
 				<variableName>.member = value
  */
 // Maps
